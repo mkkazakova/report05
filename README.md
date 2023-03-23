@@ -355,6 +355,14 @@ jobs:
 
 ```sudo apt-get install``` используется для загрузки последней версии нужного вам приложения из онлайн-хранилища программного обеспечения, на которое указывают ваши источники
 
+```${{ secrets.GITHUB_TOKEN }}``` - синтаксис для ссылки на токен
+
+```cmake -H. -B ${{github.workspace}}/build -DBUILD_TESTS=ON``` Подготовка процесса сборки, запись результата в файл
+
+```cmake --build ${{github.workspace}}/build``` Старт сборки
+
+```cmake --build ${{github.workspace}}/build --target test -- ARGS=--verbose``` Начинаем сборку test, которая будет транслировать результаты теста
+
 ```
 $ git add Action.yml
 $ git commit -m "add Action in workflows"
