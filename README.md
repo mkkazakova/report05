@@ -1,5 +1,9 @@
 # report05
 
+## Результат покрытия
+
+[![Coverage Status](https://coveralls.io/repos/github/mkkazakova/lab05/badge.svg?branch=master)](https://coveralls.io/github/mkkazakova/lab05?branch=master)
+
 ## Подготовка
 
 ```
@@ -256,10 +260,15 @@ TEST(Transaction, SimpleTest) {
 
 ```MOCK_METHOD1(ChangeBalance, void(int diff))``` Первым аргументом идет имя того самого метода, который мы ожидаем что будет выполнен в нашем будущем тесте. 
 Далее идет сигнатура этого метода. Цифра 1 в названии макроса означает число аргументов у метода ChangeBalance - один.
+
 ```EXPECT_CALL``` позволяет описать, что должно произойти с методом за время теста
+
 ```EXPECT_EQ``` EQ - Equal, проверяет равны ли
+
 ```EXPECT_THROW(tr.Make(ac1, ac1, 100), std::logic_error);``` Проверяет, что tr.Make(ac1, ac1, 100) выдает исключение типа logic_error
+
 ```EXPECT_NO_THROW(acc.Lock());``` Проверяет, что (acc.Lock() не генерирует никаких исключений
+
 ```EXPECT_FALSE``` проверяет неверно ли это 
 
 Пушим и коммитим:
@@ -375,6 +384,8 @@ $ git push origin master
 
 Регестрируемся на сайте https://coveralls.io
 
+![image](https://user-images.githubusercontent.com/125077130/227451613-339f8dd1-a56e-4cd2-9612-7f2bfd0e52af.png)
+
 Добавляем ссылку с сайта в README.md. Затем пушим и коммитим
 
 ```
@@ -386,3 +397,30 @@ $ git push origin master
 ```
 
 Вводим логин и токен
+
+
+## Скрины
+
+![image](https://user-images.githubusercontent.com/125077130/227450998-37198f2e-9ace-4f07-b507-5a4d9e15b726.png)
+
+![image](https://user-images.githubusercontent.com/125077130/227451026-7c039002-ff8f-4f57-86bb-cf79b4643743.png)
+
+![image](https://user-images.githubusercontent.com/125077130/227451089-3df744bd-12a7-43de-b0e6-ecc42732800c.png)
+
+![image](https://user-images.githubusercontent.com/125077130/227451247-4251f7cd-df63-443f-ae17-93fc9310fcc3.png)
+
+![image](https://user-images.githubusercontent.com/125077130/227451396-f7882d59-cd65-4a5f-8e32-0eeb1ac35bde.png)
+
+![image](https://user-images.githubusercontent.com/125077130/227451425-87087044-ff92-418b-9ae3-f18f88f348e9.png)
+
+![image](https://user-images.githubusercontent.com/125077130/227451440-544617ec-7b62-4c29-b527-7db4417bd89c.png)
+
+![image](https://user-images.githubusercontent.com/125077130/227451461-de9ad9cb-827d-48b6-b6a8-8184acb4a973.png)
+
+![image](https://user-images.githubusercontent.com/125077130/227451485-792fe91e-0038-4389-94cb-c253138475a1.png)
+
+
+
+
+
+
